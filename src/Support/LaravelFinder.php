@@ -11,16 +11,16 @@ use RecursiveIteratorIterator;
 use SplFileInfo;
 use Worksome\Envy\Contracts\Finder;
 
-final readonly class LaravelFinder implements Finder
+final class LaravelFinder implements Finder
 {
     /**
      * @param array<int, string> $configFiles
      * @param array<int, string> $environmentFiles
      */
     public function __construct(
-        private Application $app,
-        private array $configFiles,
-        private array $environmentFiles,
+        private readonly Application $app,
+        private readonly array $configFiles,
+        private readonly array $environmentFiles,
     ) {
     }
 

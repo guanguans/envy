@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.1",
         "illuminate/contracts": "^10.0",
         "nikic/php-parser": "^4.15",
         "nunomaduro/termwind": "^1.15",
@@ -52,7 +52,9 @@
             "@test:style",
             "@test:types",
             "@test:unit"
-        ]
+        ],
+        "rector": "@php ./vendor/bin/rector --ansi -v",
+        "rector-dry-run": "@rector --dry-run"
     },
     "config": {
         "sort-packages": true,
